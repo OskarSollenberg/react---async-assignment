@@ -1,15 +1,13 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import Food from "./Food.jsx";
+import UserGreeting from "./userGreeting";
 
 function App() {
     return (
         <>
-            <Header />
-            <Food />
-            <Footer />
+            <UserGreeting isLoggedIn={true} username="Oskar" />
         </>
     );
 }
+
+
 
 export default App;
