@@ -1,13 +1,27 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import Food from "./Food.jsx";
+import List from "./list";
 
 function App() {
+    const fruits = [
+        { id: 1, name: "Apple", calories: 95 },
+        { id: 2, name: "Banana", calories: 105 },
+        { id: 3, name: "Orange", calories: 45 },
+        { id: 4, name: "Mango", calories: 135 },
+        { id: 5, name: "Pineapple", calories: 50 },
+    ];
+
+    const vegetables = [
+        { id: 6, name: "potatoes", calories: 110 },
+        { id: 7, name: "broccoli", calories: 15 },
+        { id: 8, name: "tomato", calories: 25 },
+        { id: 9, name: "corn", calories: 63 },
+        { id: 10, name: "carrots", calories: 50 },
+    ];
     return (
         <>
-            <Header />
-            <Food />
-            <Footer />
+            {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+            {vegetables.length > 0 && (
+                <List items={vegetables} category="Vegetables" />
+            )}
         </>
     );
 }
